@@ -24,7 +24,7 @@ st.markdown(
     """
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <div style="display:flex;align-items:center">
-        <i class="fas fa-product-hunt" style="font-size:48px; margin-right: 10px;"></i>
+        <i class="fas fa-search" style="font-size:48px; margin-right: 10px;"></i>
         <div>
             <h3>Discover Product Insights</h3>
             <p>This app uses AI to provide detailed information and insights about various products.</p>
@@ -34,11 +34,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-import streamlit as st
-
-st.set_page_config(layout="wide")
-
-# Other components of your app go here
 # For example, the header
 st.markdown(
     """
