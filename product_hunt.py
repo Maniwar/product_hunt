@@ -64,7 +64,7 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your tokens are well spent:
+        prompt = f"""As a popular funny british product reviewer,  write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks and alternative options. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your tokens are well spent:
 
 1. **Summary**
    - **Overall Rating**: Rate the product from 1 to 5 ⭐️. Provide a detailed explanation of what each star rating represents.
