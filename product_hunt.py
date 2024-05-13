@@ -58,7 +58,7 @@ def get_search_suggestions(query, **kwargs):
 
 # Function to retrieve ingredients and analysis from OpenAI
 def get_analysis(product_name):
-    key = f'analysis:{product_name}'
+    key = f'review:{product_name}'
     result = r.get(key)
     if result is not None:
         return result
@@ -116,7 +116,7 @@ This review should be rich with detail and context, using clear, engaging langua
             max_tokens=4096,
         )
         analysis = response.choices[0].message.content.strip()
-        r.set(key, analysis)
+        r.set(key, review)
         return analysis
 
 def clean_text_for_tts(text):
