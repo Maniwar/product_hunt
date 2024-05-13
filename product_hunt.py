@@ -116,7 +116,7 @@ This review should be rich with detail and context, using clear, engaging langua
             max_tokens=4096,
         )
         analysis = response.choices[0].message.content.strip()
-        r.set(key, review)
+        r.set(key, analysis)
         return analysis
 
 def clean_text_for_tts(text):
