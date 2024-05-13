@@ -156,7 +156,7 @@ if input_method == "Search Box":
     """)
     product_name = st_searchbox(
         search_function=get_search_suggestions,
-        placeholder="e.g., Samsung Galaxy S21",
+        placeholder="e.g., Samsung Galaxy S21 Smartphone",
         label=None,
         clear_on_submit=False,
         clearable=True,
@@ -194,7 +194,7 @@ elif input_method == "File Upload":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the year, make, model, and trim name. Example: 2010 Honda Accord EX."""
+                "text": """Reply with only the product name, specification and product type if available. Example: Samsung Galaxy S22 Ultra Smartphone"""
             }
             
             # Send image and user message to OpenAI API
@@ -251,7 +251,7 @@ elif input_method == "Camera Capture":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the product name and specification if available. Example: Samsung Galaxy S22 Ultra"""
+                "text": """Reply with only the product name, specification and product type if available. Example: Samsung Galaxy S22 Ultra Smartphone"""
             }
             
             # Send image and user message to OpenAI API
