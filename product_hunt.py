@@ -140,7 +140,7 @@ def display_analysis(analysis, mute_audio=False):
 
 # Search Box/Input Method
 if input_method == "Search Box":
-    st.title("Search Vehicles")
+    st.title("Review Products")
     # Instruction for using the search box
     st.markdown("""
     Instructions for Search Box:
@@ -166,7 +166,7 @@ if input_method == "Search Box":
 
 # File Upload/Input Method
 elif input_method == "File Upload":
-    st.title("Upload Vehicle Image")
+    st.title("Upload Product Image")
     # Instruction for uploading files
     st.markdown("""
     Instructions for File Upload:
@@ -214,7 +214,7 @@ elif input_method == "File Upload":
             product_name = response.choices[0].message.content
             
             # Display the analysis
-            st.write("Vehicle:")
+            st.write("Product:")
             st.write(product_name)
             
             analysis = get_analysis(product_name)
