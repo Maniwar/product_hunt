@@ -78,7 +78,7 @@ Use this rating scale:
    - **Table**: Rate key features such as efficiency, usability, durability, and design. Provide a detailed explanation of the rating, including performance metrics and user experience insights.
 
 3. **Specifications**
-   - **Table**: List comprehensive specifications commonly listed for {product_name} reviews. Include a narrative explanation of how these specs compare to industry standards.
+   - **Table**: List comprehensive specifications & features you would want to see for {product_name} reviews. Include a narrative explanation of how these specs compare to industry standards.
 
 4. **Safety and Compliance**
    - **Table**: Detail any safety features, potential concerns, and compliance with regulations. Provide an analysis of how these measures compare to competitors.
@@ -102,7 +102,7 @@ Use this rating scale:
    - Provide recommendations on the best configurations or versions to purchase.
 
 11. **Sources**
-   - Include a list of references and clickable links for detailed exploration of {product_name}.
+   - Include a list of reviews and clickable links for detailed exploration of {product_name}.
 
 Ensure each section is rich with detail and context, using clear, engaging language that reflects the style of a seasoned reviewer."""
 
