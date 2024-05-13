@@ -63,11 +63,12 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""As a popular funny british product reviewer,  write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks and alternative options. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your 4000 tokens are well spent:
+        prompt = f"""As a popular, witty British product reviewer, write a comprehensive review on {product_name}. The review should adapt to the specific type of product, focusing on features, benefits, potential drawbacks, and alternative options that are relevant. Each section should be substantial, utilizing narrative text, bullet points, and tables where appropriate. Make sure your 4000 tokens are well spent:
 
 1. **Summary**
-   - **Overview & Review**: Offer a thorough review discussing the main features, benefits, and market appeal. Include anecdotes or comparisons to bring the review to life. Use the below rating scale to give a star rating and explain why with clear reasoning and wit.
-Use this rating scale:
+   - **Overview & Review**: Provide a thorough review discussing the main features, benefits, and market appeal of the product. Include anecdotes or comparisons to bring the review to life. Use the following rating scale to give a star rating and explain why, with clear reasoning and wit:
+
+Rating Scale:
 1 Star ⭐️: Poor - Significant issues, fails to meet basic expectations.
 2 Stars ⭐️⭐️: Fair - Limited functionality, several problems.
 3 Stars ⭐️⭐️⭐️: Good - Meets basic expectations with some minor drawbacks.
@@ -75,36 +76,36 @@ Use this rating scale:
 5 Stars ⭐️⭐️⭐️⭐️⭐️: Excellent - Exceptional performance, top-tier features.
 
 2. **Feature Analysis**
-   - **Table**: Rate key features such as efficiency, usability, durability, and design. Provide a detailed explanation of the rating, including performance metrics and user experience insights.
+   - **Table**: Rate key features crucial to the product's category. For example, assess battery life and camera quality for smartphones, insulation and durability for clothing, energy efficiency for appliances, or precision and ergonomics for tools. Provide detailed explanations for each rating, including performance metrics and user experience insights.
 
 3. **Specifications**
-   - **Table**: List comprehensive specifications & features you would want to see for {product_name} reviews. Include a narrative explanation of how these specs compare to industry standards.
+   - **Table**: List specifications crucial to understanding the product's performance and quality. Tailor this section to fit the product, such as detailing tech specs for electronics, fabric composition for clothing, or capacity and power settings for appliances. Include a narrative explanation of how these specs compare to industry standards.
 
 4. **Safety and Compliance**
-   - **Table**: Detail any safety features, potential concerns, and compliance with regulations. Provide an analysis of how these measures compare to competitors.
+   - **Table**: Detail any safety features, potential concerns, and compliance with regulations relevant to the product type. Analyze how these measures compare to competitors.
 
 5. **Cost Assessment**
-   - Discuss the purchase cost, value for money, and any ongoing expenses. Provide a detailed analysis including cost comparisons with similar products.
+   - Discuss the purchase cost, value for money, and any ongoing expenses relevant to the product type, such as maintenance costs for vehicles or appliances, or care instructions for clothing.
 
 6. **Maintenance**
-   - Outline the recommended maintenance schedule and detail common issues and solutions.
+   - Outline the recommended maintenance schedule and detail common issues and solutions, suitable for the product category.
 
 7. **Comparable Products**
-   - **Table**: Compare this product with at least three similar items. Discuss strengths and weaknesses in detail, focusing on performance and value.
+   - **Table**: Compare this product with at least three similar items within the same category. Discuss strengths and weaknesses in detail, focusing on performance and value.
 
 8. **Issues and Cautions**
-   - Elaborate on common problems associated with this product and warning signs that users should be aware of.
+   - Elaborate on common problems associated with the product type and warning signs that users should be aware of.
 
 9. **Unique Aspects**
-   - List and explain any fun facts, hidden features, or unique quirks of the product.
+   - List and explain any fun facts, hidden features, or unique quirks of the product, showcasing why it might stand out in its category.
 
 10. **Recommendations**
-   - Provide recommendations on the best configurations or versions to purchase.
+   - Provide recommendations on the best configurations or versions to purchase, or suggest alternative products that offer better value or performance.
 
 11. **Sources**
    - Include a list of reviews and clickable links for detailed exploration of {product_name}.
 
-Ensure each section is rich with detail and context, using clear, engaging language that reflects the style of a seasoned reviewer."""
+This review should be rich with detail and context, using clear, engaging language that reflects the style of a seasoned reviewer and adapts to the specific needs and nuances of the product type."""
 
         response = client.chat.completions.create(
             model="gpt-3.5-turbo-0125",
