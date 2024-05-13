@@ -34,6 +34,70 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+import streamlit as st
+
+st.set_page_config(layout="wide")
+
+# Other components of your app go here
+# For example, the header
+st.markdown(
+    """
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <div style="display:flex;align-items:center">
+        <i class="fas fa-search" style="font-size:48px; margin-right: 10px;"></i>
+        <div>
+            <h3>Discover Product Insights</h3>
+            <p>This app uses AI to provide detailed information and insights about various products.</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Static Rating Scale Display in a Table
+st.markdown(
+    """
+    <style>
+    table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    </style>
+    <table>
+        <tr>
+            <th>Rating</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>1 Star ⭐️</td>
+            <td>Poor - Does not meet expectations, significant issues.</td>
+        </tr>
+        <tr>
+            <td>2 Stars ⭐️⭐️</td>
+            <td>Fair - Some functionality but with many problems.</td>
+        </tr>
+        <tr>
+            <td>3 Stars ⭐️⭐️⭐️</td>
+            <td>Good - Meets expectations with average performance and minor drawbacks.</td>
+        </tr>
+        <tr>
+            <td>4 Stars ⭐️⭐️⭐️⭐️</td>
+            <td>Very Good - Exceeds expectations, offering superior functionality with very few issues.</td>
+        </tr>
+        <tr>
+            <td>5 Stars ⭐️⭐️⭐️⭐️⭐️</td>
+            <td>Excellent - Exceptional performance with state-of-the-art features.</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 
  # UI for selecting input method
 input_method = st.radio("Select Input Method", ("Search Box", "File Upload", "Camera Capture"))
@@ -67,8 +131,13 @@ def get_analysis(product_name):
         prompt = f"""As a popular funny british product reviewer,  write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks and alternative options. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your tokens are well spent:
 
 1. **Summary**
-   - **Overall Rating**: Rate the product from 1 to 5 ⭐️. Provide a detailed explanation of what each star rating represents.
-   - **Overview & Review**: Offer a thorough review discussing the main features, benefits, and market appeal. Include anecdotes or comparisons to bring the review to life.
+   - **Overview & Review**: Offer a thorough review discussing the main features, benefits, and market appeal. Include anecdotes or comparisons to bring the review to life. Use the below rating scale to give a star rating and explain why with clear reasoning and wit.
+Use this rating scale:
+1 Star ⭐️: Poor - Significant issues, fails to meet basic expectations.
+2 Stars ⭐️⭐️: Fair - Limited functionality, several problems.
+3 Stars ⭐️⭐️⭐️: Good - Meets basic expectations with some minor drawbacks.
+4 Stars ⭐️⭐️⭐️⭐️: Very Good - Exceeds expectations with minimal issues.
+5 Stars ⭐️⭐️⭐️⭐️⭐️: Excellent - Exceptional performance, top-tier features.
 
 2. **Feature Analysis**
    - **Table**: Rate key features such as efficiency, usability, durability, and design. Provide a detailed explanation of the rating, including performance metrics and user experience insights.
