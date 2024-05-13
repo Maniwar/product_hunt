@@ -34,66 +34,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# For example, the header
-st.markdown(
-    """
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <div style="display:flex;align-items:center">
-        <i class="fas fa-search" style="font-size:48px; margin-right: 10px;"></i>
-        <div>
-            <h3>Discover Product Insights</h3>
-            <p>This app uses AI to provide detailed information and insights about various products.</p>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Static Rating Scale Display in a Table
-st.markdown(
-    """
-    <style>
-    table {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-    </style>
-    <table>
-        <tr>
-            <th>Rating</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>1 Star ⭐️</td>
-            <td>Poor - Does not meet expectations, significant issues.</td>
-        </tr>
-        <tr>
-            <td>2 Stars ⭐️⭐️</td>
-            <td>Fair - Some functionality but with many problems.</td>
-        </tr>
-        <tr>
-            <td>3 Stars ⭐️⭐️⭐️</td>
-            <td>Good - Meets expectations with average performance and minor drawbacks.</td>
-        </tr>
-        <tr>
-            <td>4 Stars ⭐️⭐️⭐️⭐️</td>
-            <td>Very Good - Exceeds expectations, offering superior functionality with very few issues.</td>
-        </tr>
-        <tr>
-            <td>5 Stars ⭐️⭐️⭐️⭐️⭐️</td>
-            <td>Excellent - Exceptional performance with state-of-the-art features.</td>
-        </tr>
-    </table>
-    """,
-    unsafe_allow_html=True
-)
-
  # UI for selecting input method
 input_method = st.radio("Select Input Method", ("Search Box", "File Upload", "Camera Capture"))
 
@@ -341,6 +281,39 @@ elif input_method == "Camera Capture":
 
             analysis = get_analysis(product_name)
             display_analysis(analysis) 
+st.markdown(
+    """
+    <style>
+    table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    </style>
+    <table>
+        <tr>
+            <th>1 Star ⭐️</th>
+            <th>2 Stars ⭐️⭐️</th>
+            <th>3 Stars ⭐️⭐️⭐️</th>
+            <th>4 Stars ⭐️⭐️⭐️⭐️</th>
+            <th>5 Stars ⭐️⭐️⭐️⭐️⭐️</th>
+        </tr>
+        <tr>
+            <td>Poor - Does not meet expectations, significant issues.</td>
+            <td>Fair - Some functionality but with many problems.</td>
+            <td>Good - Meets expectations with average performance and minor drawbacks.</td>
+            <td>Very Good - Exceeds expectations, offering superior functionality with very few issues.</td>
+            <td>Excellent - Exceptional performance with state-of-the-art features.</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 
 st.divider()
 expander = st.expander("Legal and Data Privacy Statement", expanded=False)
