@@ -63,7 +63,7 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""As a popular funny british product reviewer,  write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks and alternative options. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your tokens are well spent:
+        prompt = f"""As a popular funny british product reviewer,  write a comprehensive review on {product_name} focusing on its features, benefits, and any potential drawbacks and alternative options. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Make sure your 4000 tokens are well spent:
 
 1. **Summary**
    - **Overview & Review**: Offer a thorough review discussing the main features, benefits, and market appeal. Include anecdotes or comparisons to bring the review to life. Use the below rating scale to give a star rating and explain why with clear reasoning and wit.
@@ -78,7 +78,7 @@ Use this rating scale:
    - **Table**: Rate key features such as efficiency, usability, durability, and design. Provide a detailed explanation of the rating, including performance metrics and user experience insights.
 
 3. **Specifications**
-   - **Table**: List comprehensive specifications such as dimensions, weight, materials used, etc. Include a narrative explanation of how these specs compare to industry standards.
+   - **Table**: List comprehensive specifications commonly listed for {product_name} reviews. Include a narrative explanation of how these specs compare to industry standards.
 
 4. **Safety and Compliance**
    - **Table**: Detail any safety features, potential concerns, and compliance with regulations. Provide an analysis of how these measures compare to competitors.
