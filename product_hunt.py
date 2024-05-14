@@ -194,7 +194,7 @@ elif input_method == "File Upload":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the product name, specification and product type if available. Example: Samsung Galaxy S22 Ultra Smartphone"""
+                "text": """Reply with only the product name, specification and product type if available. Example: Samsung Galaxy S22 Ultra Smartphone, or Super Mario Brothers Gameboy Game"""
             }
             
             # Send image and user message to OpenAI API
