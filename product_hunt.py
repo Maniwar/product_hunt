@@ -132,7 +132,7 @@ def clean_text_for_tts(text):
 
 
 
-def display_analysis(analysis, mute_audio=False):
+def display_analysis(analysis, mute_audio=True):
     st.subheader("AI Analysis:")
     st.write(analysis)  # Display the original analysis text
 
