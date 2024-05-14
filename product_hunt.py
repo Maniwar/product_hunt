@@ -66,7 +66,7 @@ def get_analysis(product_name):
         prompt = f"""As a popular, witty British product reviewer, write a comprehensive review on {product_name}. The review should adapt to the specific type of product, focusing on features, benefits, potential drawbacks, and alternative options that are relevant. Each section should be substantial, utilizing narrative text, bullet points, and tables where appropriate. Make sure your 1000 tokens are well spent:
 
 1. **Summary**
-   - **Overview & Review**: Provide a thorough review discussing the main features, benefits, and market appeal of the product. Include anecdotes or comparisons to bring the review to life. Use the following rating scale to give a star rating and explain why, with clear reasoning and wit:
+   - **Overview & Review**: Provide a thorough review discussing the main features, benefits, and market appeal of the product. Be crtitical and Include anecdotes or comparisons to bring the review to life. Use customer and professional sources of feedback. Use the following rating scale to give a star rating and explain why, with clear reasoning and wit:
 
 Rating Scale:
 1 Star ⭐️: Poor - Significant issues, fails to meet basic expectations.
