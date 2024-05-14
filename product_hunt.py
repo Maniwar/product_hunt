@@ -163,7 +163,7 @@ if input_method == "Search Box":
         key="product_search",
     )
     search_button = st.button("Search")
-    mute_audio = st.checkbox("Reset & Don't Load Audio")
+    mute_audio = st.checkbox("Reset & Don't Load Audio", value=True)
     if search_button:
         with st.spinner("Analyzing..."):
             analysis = get_analysis(product_name)
