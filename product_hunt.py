@@ -113,7 +113,7 @@ This review should be rich with detail and context, using clear, engaging langua
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": product_name}
             ],
-            max_tokens=4096,
+            max_tokens=3096,
         )
         analysis = response.choices[0].message.content.strip()
         r.set(key, analysis)
